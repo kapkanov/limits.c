@@ -1,8 +1,8 @@
 #ifndef LIMITS32_C
 #define LIMITS32_C
 
-#include "assert.c"
-#include "types32.c"
+#include "includes/assert.c"
+#include "includes/types32.c"
 
 const i8  I8_MIN  = -128;
 const i8  I8_MAX  =  127;

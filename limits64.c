@@ -1,8 +1,8 @@
 #ifndef LIMITS64_C
 #define LIMITS64_C
 
-#include "assert.c"
-#include "types64.c"
+#include "includes/assert.c"
+#include "includes/types64.c"
 
 const i64 I64_MIN = 0x8000000000000000; /* -9223372036854775808 */
 const i64 I64_MAX = 0x7fffffffffffffff; /*  9223372036854775807 */
