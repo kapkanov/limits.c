@@ -3,14 +3,14 @@
 
 #include "assert.c"
 
-typedef long long int          i64;
-typedef unsigned long long int u64;
-typedef double                 f64;
+typedef long long int          I64;
+typedef unsigned long long int U64;
+typedef double                 F64;
 
 void assert_types64(void) {
-  assert(sizeof(i64) == 8, "sizeof(i64) != 8\n");
-  assert(sizeof(u64) == 8, "sizeof(u64) != 8\n");
-  assert(sizeof(f64) == 8, "sizeof(f64) != 8\n");
+  assert(sizeof(I64) == 8, "sizeof(I64) != 8\n");
+  assert(sizeof(U64) == 8, "sizeof(U64) != 8\n");
+  assert(sizeof(F64) == 8, "sizeof(F64) != 8\n");
 }
 
 #endif

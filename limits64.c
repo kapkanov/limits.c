@@ -4,17 +4,17 @@
 #include "includes/assert.c"
 #include "includes/types64.c"
 
-const i64 I64_MIN = 0x8000000000000000; /* -9223372036854775808 */
-const i64 I64_MAX = 0x7fffffffffffffff; /*  9223372036854775807 */
-const u64 U64_MAX = 0xffffffffffffffff; /* 18446744073709551615 */
+const I64 I64_MIN = 0x8000000000000000; /* -9223372036854775808 */
+const I64 I64_MAX = 0x7fffffffffffffff; /*  9223372036854775807 */
+const U64 U64_MAX = 0xffffffffffffffff; /* 18446744073709551615 */
 
 void assert_limits64(void) {
   /*
    * 2^64 - 1 = 2 * 2^63 - 1 = 2^63 - 1 + 2^63 = 2^60 * 8 - 1 + 2^60 * 8
    */
-  const u64 two_pow_thirty_unsigned = 1024 * 1024 * 1024;
-  const u64 two_pow_sixty_unsigned  = two_pow_thirty_unsigned * two_pow_thirty_unsigned;
-  u64       max64_unsigned;
+  const U64 two_pow_thirty_unsigned = 1024 * 1024 * 1024;
+  const U64 two_pow_sixty_unsigned  = two_pow_thirty_unsigned * two_pow_thirty_unsigned;
+  U64       max64_unsigned;
   max64_unsigned  = two_pow_sixty_unsigned;
   max64_unsigned  = 8 * two_pow_sixty_unsigned;
   max64_unsigned -= 1;
@@ -24,9 +24,9 @@ void assert_limits64(void) {
   /*
    * 2^63 - 1 = 8 * 2^60 - 1 = 4 * 2^60 - 1 + 4 * 2^60
    */
-  const i64 two_pow_thirty_signed = 1024 * 1024 * 1024;
-  const i64 two_pow_sixty_signed  = two_pow_thirty_signed * two_pow_thirty_signed;
-  i64       max64_signed;
+  const I64 two_pow_thirty_signed = 1024 * 1024 * 1024;
+  const I64 two_pow_sixty_signed  = two_pow_thirty_signed * two_pow_thirty_signed;
+  I64       max64_signed;
   max64_signed  = 4 * two_pow_sixty_signed;
   max64_signed -= 1;
   max64_signed += 4 * two_pow_sixty_signed;
